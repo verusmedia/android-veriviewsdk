@@ -209,7 +209,6 @@ Supported events:
     VOLUME_DOWN
     VOLUME_UP
     SKIP_VIDEO
-    CLOSE_BANNER
     COMPLETED_VIDEO
     PAUSED_BY_VOL
     RESUMED_BY_VOL
@@ -218,6 +217,6 @@ Supported events:
 The following code sends the RESUMED_BY_VOL event using the EventsManager class and the Events enum.
 ```java
 EventsManager eventsManager = new EventsManager();
-eventsManager.registerEvent(Events.RESUMED_BY_VOL, yourID, second, "video");
+eventsManager.registerEvent(Events.RESUMED_BY_VOL, yourID, second, "video","adId");
 ```
 
