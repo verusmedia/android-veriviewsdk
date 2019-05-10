@@ -37,6 +37,16 @@ dependencies{
     implementation "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:support-v13:$SUPPORT_LIBRARY_VERSION"
     implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
+    implementation 'com.google.protobuf:protobuf-lite:3.0.0'
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+    implementation 'io.grpc:grpc-protobuf-lite:1.15.1'
+    implementation 'io.grpc:grpc-okhttp:1.15.1'
+    implementation group: 'io.grpc', name: 'grpc-core', version: '1.15.1'
+    implementation group: 'com.squareup.okio', name: 'okio', version: '1.13.0'
+    implementation group: 'com.squareup.okhttp', name: 'okhttp', version: '2.5.0'
+    implementation 'commons-io:commons-io:2.5'
+    implementation 'io.grpc:grpc-stub:1.15.1'
+    implementation 'org.jetbrains:annotations-java5:15.0'
     ...
 }
 
