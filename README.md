@@ -1,4 +1,4 @@
-# Android-verusview-framework
+# Android-Veriview-SDK
 
 ##### Requirements:
 
