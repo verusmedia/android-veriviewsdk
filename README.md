@@ -10,13 +10,19 @@
 # Guide to use Video Capture library
 
 ### Installation
-•	Download aar lib from latest release. 
-•	In Android studio: File -> New -> New Module and choose Import .jar/.aar Package, press next
-•	File name: path to aar
-•	File -> Project Structure -> {your_module_tab} -> dependencies and add just imported module as dependency.
-You need to change your minSdkVersion to >=21 in the Module:app Gradle.
-You need to add the following codein the Module:app Gradle.
+•	Change your minSdkVersion to >=21 in the Module:app Gradle.
 
+•	Add the jitpack repository to the Project Gradle.
+```
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+•	Add the following code in the Module:app Gradle.
 ```
 Android{
     ...
@@ -26,27 +32,18 @@ Android{
     }
     ...
 }
-
-
+```
+•	Add the veriview-sdk and android dependencies to your gradle.
+```
 dependencies{
     ...
+    //Android core dependencies
     final SUPPORT_LIBRARY_VERSION = '28.0.0'
     implementation "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
-    implementation "com.android.support:customtabs:$SUPPORT_LIBRARY_VERSION"
-    implementation "com.android.support:support-media-compat:$SUPPORT_LIBRARY_VERSION"
-    implementation "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
-    implementation "com.android.support:support-v13:$SUPPORT_LIBRARY_VERSION"
-    implementation "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
-    implementation 'com.google.protobuf:protobuf-lite:3.0.0'
-    implementation 'javax.annotation:javax.annotation-api:1.2'
-    implementation 'io.grpc:grpc-protobuf-lite:1.15.1'
-    implementation 'io.grpc:grpc-okhttp:1.15.1'
-    implementation group: 'io.grpc', name: 'grpc-core', version: '1.15.1'
-    implementation group: 'com.squareup.okio', name: 'okio', version: '1.13.0'
-    implementation group: 'com.squareup.okhttp', name: 'okhttp', version: '2.5.0'
-    implementation 'commons-io:commons-io:2.5'
-    implementation 'io.grpc:grpc-stub:1.15.1'
-    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    
+    //Veriview-sdk dependency
+    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.17-beta'
     ...
 }
 
@@ -210,7 +207,6 @@ Supported events:
     VOLUME_DOWN
     VOLUME_UP
     SKIP_VIDEO
-    CLOSE_BANNER
     COMPLETED_VIDEO
     PAUSED_BY_VOL
     RESUMED_BY_VOL
