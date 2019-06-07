@@ -208,6 +208,8 @@ Supported events:
     VOLUME_UP
     SKIP_VIDEO
     COMPLETED_VIDEO
+    RESUMED_BY_VOL
+    PAUSED_BY_VOL
 ```
 ##### Usage of EventsManager
 The following code sends the RESUMED_BY_VOL event using the EventsManager class and the Events enum.
