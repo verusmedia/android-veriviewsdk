@@ -43,7 +43,7 @@ dependencies{
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     
     //Veriview-sdk dependency
-    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.17-beta'
+    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.18-beta'
     ...
 }
 
@@ -113,7 +113,7 @@ VeriviewFragment fragment;
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    fragment = new VeriviewFragment(this, R.id.container,"YourAPIKey", "yourReproductionID","yourAdId", OnVideoCaptureListener);
+    fragment = new VeriviewFragment(this, R.id.container,"YourAPIKey", "youResourceId","yourReproductionId", OnVideoCaptureListener);
 }
 
 ```
@@ -129,7 +129,7 @@ public int getVideoSecond() {
 
 @Override
 public String getVideoId() {
-    return "YourVideoId";
+    return "yourResourceId";
 }
 
 @Override
@@ -208,8 +208,6 @@ Supported events:
     VOLUME_UP
     SKIP_VIDEO
     COMPLETED_VIDEO
-    PAUSED_BY_VOL
-    RESUMED_BY_VOL
 ```
 ##### Usage of EventsManager
 The following code sends the RESUMED_BY_VOL event using the EventsManager class and the Events enum.
