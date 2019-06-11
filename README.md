@@ -119,22 +119,12 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 You can implement the OnVideoCaptureListener on your class or you can create a new one in the OnVideoCapture field of the attachFragment field.
 
-These methods will be called while you are sending data through the fragment. You have to add your reproductionId, VideoId and video second to the methods.
+These methods will be called while you are sending data through the fragment. You have to return the current second of the video in millis.
 
 ```java
 @Override
 public int getVideoSecond() {
-    return yourVideoSecond;
-}
-
-@Override
-public String getVideoId() {
-    return "yourResourceId";
-}
-
-@Override
-public String getReproductionId() {
-    return "YourReproductionId";
+    return yourVideoSecondInMillis;
 }
 
 ```
