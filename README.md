@@ -43,7 +43,7 @@ dependencies{
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     
     //Veriview-sdk dependency
-    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.20-beta'
+    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.21-beta'
     ...
 }
 
@@ -119,12 +119,12 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 You can implement the OnVideoCaptureListener on your class or you can create a new one in the OnVideoCapture field of the attachFragment field.
 
-These methods will be called while you are sending data through the fragment. You have to return the current second of the video in millis.
+These methods will be called while you are sending data through the fragment. You have to return the current second of the video.
 
 ```java
 @Override
 public int getVideoSecond() {
-    return yourVideoSecondInMillis;
+    return yourVideoSecond;
 }
 
 ```
