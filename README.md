@@ -43,7 +43,7 @@ dependencies{
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     
     //Veriview-sdk dependency
-    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.21-beta'
+    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.22-beta'
     ...
 }
 
@@ -197,6 +197,7 @@ Supported events:
     VOLUME_DOWN
     VOLUME_UP
     SKIP_VIDEO
+    CLICK_CTA
     COMPLETED_VIDEO
     RESUMED_BY_VOL
     PAUSED_BY_VOL
