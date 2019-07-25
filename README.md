@@ -156,8 +156,8 @@ protected void onDestroy() {
     if(!(fragment==null)){fragment.onDestroyView();}
     super.onDestroy();
 }
-
 ```
+You can also move the fragment.onDestroyView() to the function that calls onDestroyView() to finish the veriview session. 
 #### Handling SDK Methods
 When you implement the onVideoCaptureListener it will have the following methods:
 ```java
