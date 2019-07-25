@@ -98,7 +98,7 @@ Do not set the visibility of the FrameLayout to INVISIBLE or HIDE
 You have to implement the OnVideoCaptureListener to get the events from the videocapture.
 
 ```java
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnVideoCaptureListener {
     ...
 }
 
