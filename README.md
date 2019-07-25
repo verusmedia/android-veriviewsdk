@@ -43,7 +43,7 @@ dependencies{
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     
     //Veriview-sdk dependency
-    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.22-beta'
+    implementation 'com.gitlab.jinglz.apps:android-veriview-sdk:1.0.23-beta'
     ...
 }
 
